@@ -1,61 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../assets/scss/resume.scss'
 
-export default class Resume extends Component {
- 
+export default class Resume extends React.Component {
+  componentDidMount() {
+    this.openPDF();
+  }
+  openPDF = () => {
+    window.open('/resume.pdf', '_blank');
+  };
+  
   render() {
-    const fileLink = 'https://drive.google.com/file/d/1YY1S4dfVzGlX1MNimnv9XeZLCDGnFpYa/view?usp=drivesdk';
- 
+    
     return (
       <div className='main-div' >
-         <iframe src={fileLink} className='iframe'  ></iframe>
+        
       </div>
     )
   }
 }
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
