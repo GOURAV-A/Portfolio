@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import techImage from '../tech.jpg';
+
 import '../assets/scss/body.scss';
 import {
     GithubOutlined,
@@ -14,8 +14,8 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
 import particlesConfig from './particlesConfig.json';
-import Navbar from './Navbar';
-
+import bodyImage from './body.jpg'; // Import the image
+//import bodyImage from './Untitled design.jpg';
 
 const Body = () => {
     const [init, setInit] = useState(false);
@@ -46,7 +46,7 @@ const Body = () => {
                 />
                 
             )}
-            {/* <Navbar/> */}
+          
             <div className='about_me'>
                 <p className='p1'>Hi There,</p>
                 <p className='p2'>I'm Gourav Anand</p>
@@ -63,6 +63,11 @@ const Body = () => {
                     <a href='tel:'> <PhoneOutlined /></a>
                 </div>
             </div>
+          
+            <div className="image-container">
+                    <img src={bodyImage} alt="Body" className="body-image" />
+                </div>
+            
         </div>
         </>
     );
